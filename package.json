@@ -1,0 +1,38 @@
+{
+  "name": "new-girl-clock",
+  "version": "1.0.0",
+  "description": "A clock built to the them of New Girl using Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshjnunez/new-girl-clock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshjnunez/new-girl-clock/issues"
+  },
+  "homepage": "https://github.com/joshjnunez/new-girl-clock#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-clock": "^3.0.0",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^4.3.0",
+    "path": "^0.12.7",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
