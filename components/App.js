@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
+import '../Style.css';
 const { characters } = require('../characters.js');
 
 const App = () => {
   const [time, setTime] = useState('');
-  const [character, setCharacter] = useState(characters.nick);
+  const [character, setCharacter] = useState(characters[0].gif);
+  const [alarmTime, setAlarmTime] = useState('');
 
   useEffect(() => {
     const interval = setInterval(
       () => setTime(new Date().toLocaleTimeString()),
       1000
     );
-
-    // Object.keys, find next item 
-
-    // let char;
-    // for (let key in characters) {
-    //   char = characters[key];
-    // }
+    // console.info(characters);
+    let index = 1;
     const changeChars = setInterval(() => {
-      setCharacter(char);
+      if (index === 9) {
+        setCharacter(characters[0].gif);
+        index = 0;
+      }
+      setCharacter(characters[index++].gif);
     }, 10000);
 
     return () => {
@@ -27,12 +28,26 @@ const App = () => {
     };
   }, []);
 
+  const setAlarm = () => {
+    console.info('clicked');
+  };
+
+  const handleChange = (e) => {
+    setAlarmTime(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
     <div className="app">
       <h1>New Girl Clock</h1>
-      <div>{time}</div>
-      <img src={character} />
       <p>It's always time for New Girl</p>
+      <div className="time">{time}</div>
+      <img src={character} />
+      <h3>Set ALARM:</h3>
+      <input onChange={(e) => handleChange(e)} placeholder="00:00"></input>
+      <button size="lg" onClick={() => setAlarm()}></button>
+
+      {/* <div>{alarmTime}</div> */}
     </div>
   );
 };
