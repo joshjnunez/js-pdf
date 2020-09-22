@@ -1,2 +1,2 @@
 # new-girl-clock
-A clock built to the them of New Girl using Javascript.
+A clock built to the theme of New Girl using Javascript.
