@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/joshjnunez/new-girl-clock#readme",
   "dependencies": {
+    "jspdf": "^2.2.0",
     "react": "^16.13.1",
     "react-clock": "^3.0.0",
     "react-dom": "^16.13.1"
